@@ -34,7 +34,7 @@ public class SignController {
         // 서비스에 DTO 넘기기
         userService.createUser(userDto);
 
-        return "main";
+        return "sign";
     }
 
     @PostMapping("/auth/login")
@@ -45,6 +45,11 @@ public class SignController {
     @GetMapping("/main")
     public String main(Model model) {
         return "main";
+    }
+
+    @GetMapping("/")
+    public String root() {
+        return "forward:/main";
     }
 
 }

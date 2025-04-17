@@ -15,7 +15,7 @@ public class UserService {
     @Transactional
     public void createUser(UserDto userDto) {
         Users user = userDto.toEntity();
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(userDto.getPassword()));
         user.setJob(userDto.getJob());
 
         if ("student".equals(user.getJob())) {
