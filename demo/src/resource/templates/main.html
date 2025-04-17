@@ -33,7 +33,7 @@
                     <ul class="mypage-more">
                         <li>
                             <a th:href="@{/auth}" sec:authorize="isAnonymous()">SIGN IN</a>
-                            <a th:href="@{/auth/logout}" sec:authorize="isAuthenticated()">LOG OUT</a>
+                            <a th:href="@{/auth/logout}" sec:authorize="isAuthenticated()" onclick="logout()">LOGOUT</a>
                         </li>
                         <hr>
                         <li><a href="#">MY PAGE</a></li>

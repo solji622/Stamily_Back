@@ -11,3 +11,7 @@ mypageIcon.addEventListener("click", () => {
     if(mypageMore.style.display == "none") mypageMore.style.display = "block";
     else mypageMore.style.display = "none";
 });
+
+function logout() {
+    alert("로그아웃 되었습니다.")
+}
